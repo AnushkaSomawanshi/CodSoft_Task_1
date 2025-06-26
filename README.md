@@ -1,82 +1,89 @@
 CODSOFT Internship Projects
 
 This repository includes the work I completed as part of the CODSOFT Data Science Internship. During the internship, I worked on three machine learning projects that helped me build a deeper understanding of data analysis, model development, and practical applications of machine learning using Python.
+Titanic Survival Prediction
+Internship: CodSoft Data Science Internship
+Task 1: Titanic Survival Prediction
+Objective
+The objective of this project is to predict whether a passenger on the Titanic survived or not, using machine learning techniques. This task involves cleaning and analyzing real-world data, selecting meaningful features, training classification models, and evaluating their performance. This is a classic beginner-friendly problem that builds a strong foundation in supervised learning.
 
-Project Overview
+Dataset Description
+The dataset used in this task contains data of passengers aboard the RMS Titanic. Each row represents one person, and columns contain information such as:
 
-1. Iris Flower Classification
+PassengerId: Unique identifier for each passenger
 
-In this task, I worked with the popular Iris dataset, which contains features like petal length, petal width, sepal length, and sepal width for three different species of Iris flowers.
+Pclass: Ticket class (1 = Upper, 2 = Middle, 3 = Lower)
 
-What I did:
-- Performed data cleaning and explored the dataset using visualizations like pairplots and boxplots to understand the relationships between features.
-- Observed that petal length and petal width were the most distinguishing features between species.
-- Applied classification algorithms such as Logistic Regression, K-Nearest Neighbors (KNN), and Decision Tree.
-- Compared model performances using accuracy scores and confusion matrices.
+Name: Full name
 
-What I observed:
-- KNN and Decision Tree models performed well with high accuracy.
-- Setosa was easily separable, while Versicolor and Virginica had some overlap.
-- Feature scaling significantly impacted KNN's performance.
+Sex: Gender
 
-This project helped me understand how basic machine learning models can be used to solve classification problems effectively.
+Age: Age in years
 
-2. Sales Prediction
+SibSp: Number of siblings/spouses aboard
 
-This task involved predicting product sales using regression techniques. The dataset included features like advertising spend across different platforms (TV, Radio, and Newspaper) and corresponding sales figures.
+Parch: Number of parents/children aboard
 
-What I did:
-- Carried out exploratory data analysis and visualized the correlation between advertising spend and sales.
-- Observed that TV and Radio spend had stronger positive correlation with sales than Newspaper spend.
-- Implemented Linear Regression and Random Forest Regressor to predict future sales.
-- Evaluated models using R-squared, MAE, and residual plots.
+Ticket: Ticket number
 
-What I observed:
-- Linear Regression gave a good baseline model, but Random Forest provided better accuracy and handled non-linearity more effectively.
-- The model could be improved further by including more business-specific features like seasonality, discounts, or customer demographics.
+Fare: Amount paid for the ticket
 
-This task gave me insights into how data-driven decisions can optimize marketing strategies and predict business performance.
+Cabin: Cabin number
 
-3. Movie Rating Prediction
+Embarked: Port of Embarkation (C = Cherbourg, Q = Queenstown, S = Southampton)
 
-The goal of this project was to predict the rating of a movie based on available metadata such as genre, director, cast, and duration.
+Survived: Target variable (0 = Did not survive, 1 = Survived)
 
-What I did:
-- Cleaned and preprocessed the dataset, handled missing values, and encoded categorical variables like genre and director using label encoding and one-hot encoding.
-- Explored how certain directors or genres were linked to higher average ratings.
-- Built regression models including Linear Regression and Support Vector Regressor (SVR) to predict ratings.
-- Evaluated the models using Mean Squared Error and R-squared metrics.
+Steps Performed
+1. Data Preprocessing
+Handled missing values in columns like Age, Cabin, and Embarked.
 
-What I observed:
-- Some categorical features (like popular directors or actor combinations) had a clear influence on ratings.
-- Encoding technique and feature selection played a major role in model performance.
-- SVR captured the trends better but required careful tuning.
+Converted categorical variables into numeric using encoding techniques.
 
-This project taught me how to engineer features from categorical data and apply regression techniques to real-world prediction problems.
+Removed unnecessary features such as Name, Ticket, and Cabin for model simplicity.
 
-Tools and Libraries Used
+2. Exploratory Data Analysis (EDA)
+Analyzed survival distribution based on gender, class, age, etc.
 
-- Python
-- pandas, numpy
-- matplotlib, seaborn
-- scikit-learn
-- Jupyter Notebook / Google Colab
+Used visualizations like bar plots, histograms, and correlation heatmaps.
 
-Repository Structure
+3. Feature Engineering
+Selected relevant features based on domain knowledge and correlation.
 
-CODSOFT/
-│
-├── Task 1 - Iris Flower Classification/
-│   └── iris_classification.ipynb
-│
-├── Task 2 - Sales Prediction/
-│   └── sales_prediction.ipynb
-│
-├── Task 3 - Movie Rating Prediction/
-│   └── movie_rating_prediction.ipynb
-│
-└── README.md
+Transformed and scaled data where needed.
 
-Final Note
+4. Model Building
+Applied supervised learning algorithms such as:
 
-This internship gave me the opportunity to apply machine learning algorithms to real datasets and understand the end-to-end workflow, from data preprocessing to model evaluation. Each task helped me build confidence in working with Python and its data science libraries. I look forward to exploring more complex datasets and diving deeper into areas like feature engineering, hyperparameter tuning, and deep learning.
+Logistic Regression
+
+Random Forest Classifier
+
+Split data into training and test sets using train_test_split.
+
+5. Model Evaluation
+Evaluated models using metrics like:
+
+Accuracy
+
+Confusion Matrix
+
+Precision, Recall, and F1-Score
+
+(Optional) ROC Curve and AUC score
+
+Results
+The Random Forest Classifier gave the best accuracy among the models.
+
+Gender, passenger class, and fare were among the top predictors of survival.
+
+Female passengers and those in higher classes had higher survival probabilities.
+
+Future Scope
+Use advanced models like XGBoost or ensemble techniques for improved accuracy.
+
+Deploy the model using Streamlit to create a web-based Titanic survival predictor.
+
+Tune hyperparameters using GridSearchCV.
+
+Apply cross-validation to reduce variance in model performance.
