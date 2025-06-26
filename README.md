@@ -1,6 +1,8 @@
 CODSOFT Internship Projects
 
 This repository includes the work I completed as part of the CODSOFT Data Science Internship. During the internship, I worked on three machine learning projects that helped me build a deeper understanding of data analysis, model development, and practical applications of machine learning using Python.
+
+
 Titanic Survival Prediction
 Internship: CodSoft Data Science Internship
 Task 1: Titanic Survival Prediction
