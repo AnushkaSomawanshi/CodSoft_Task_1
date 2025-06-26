@@ -1,91 +1,94 @@
-CODSOFT Internship Projects
+# CODSOFT Internship Projects
 
-This repository includes the work I completed as part of the CODSOFT Data Science Internship. During the internship, I worked on three machine learning projects that helped me build a deeper understanding of data analysis, model development, and practical applications of machine learning using Python.
+This repository includes the work I completed as part of the CODSOFT Data Science Internship.  
+During the internship, I worked on three machine learning projects that helped me build a deeper understanding of data analysis, model development, and the practical applications of machine learning using Python.
+
+This README file describes Task 1: Titanic Survival Prediction, the first project in the internship.
+
+---
+
+# Titanic Survival Prediction
+
+## Project Overview
+
+This project aims to predict the survival of passengers aboard the Titanic using supervised machine learning algorithms.  
+The dataset contains passenger details such as age, gender, class, fare, and embarkation point.  
+The objective is to build a model that accurately classifies whether a given passenger survived or not.
+
+---
+
+## What I Did
+
+- Loaded and explored the Titanic dataset  
+- Cleaned the data by handling missing values in key columns like Age, Embarked, and Cabin  
+- Performed exploratory data analysis (EDA) to identify important patterns and survival trends  
+- Converted categorical features to numerical using encoding techniques  
+- Selected the most relevant features for model training  
+- Trained and tested classification models:
+  - Logistic Regression  
+  - Random Forest Classifier  
+- Evaluated model performance using accuracy, confusion matrix, and classification report  
+- Interpreted feature importance to understand which variables influenced survival the most  
+
+---
+
+## What I Observed
+
+- Gender was a major factor: female passengers had significantly higher survival rates  
+- Passenger class also played a strong role — first-class passengers had better survival outcomes  
+- Fare and embarkation point had a moderate influence on survival  
+- The Random Forest Classifier outperformed Logistic Regression in terms of accuracy and generalization  
+- Data visualizations made patterns more obvious and helped guide feature selection  
+
+---
+
+## Dataset Description
+
+The Titanic dataset includes the following features:
+
+- PassengerId: Unique identifier for each passenger  
+- Pclass: Ticket class (1 = Upper, 2 = Middle, 3 = Lower)  
+- Name, Sex, Age  
+- SibSp, Parch: Number of relatives aboard  
+- Ticket, Fare, Cabin  
+- Embarked: Port of Embarkation (C = Cherbourg, Q = Queenstown, S = Southampton)  
+- Survived: Target variable (0 = Did not survive, 1 = Survived)  
+
+---
+
+## Key Steps in the Project
+
+### 1. Data Cleaning
+
+- Handled missing values using imputation or dropping as appropriate  
+- Removed less useful columns like Name, Ticket, and Cabin  
+
+### 2. Exploratory Data Analysis (EDA)
+
+- Analyzed survival rates by gender, class, age groups, and more  
+- Visualized data using seaborn and matplotlib libraries  
+
+### 3. Feature Engineering
+
+- Encoded categorical variables such as Sex and Embarked  
+- Selected features like Pclass, Sex, Age, Fare, SibSp, and Parch  
+
+### 4. Model Training and Evaluation
+
+- Split data into training and testing sets using train_test_split  
+- Trained Logistic Regression and Random Forest models  
+- Evaluated results using:
+  - Accuracy Score  
+  - Confusion Matrix  
+  - Classification Report  
+
+---
+
+## Future Enhancements
+
+- Improve performance using advanced models like XGBoost or Support Vector Machines  
+- Create a simple web interface using Streamlit for live predictions  
+- Perform hyperparameter tuning with GridSearchCV  
+- Use cross-validation for more robust model evaluation  
 
 
-Titanic Survival Prediction
-Internship: CodSoft Data Science Internship
-Task 1: Titanic Survival Prediction
-Objective
-The objective of this project is to predict whether a passenger on the Titanic survived or not, using machine learning techniques. This task involves cleaning and analyzing real-world data, selecting meaningful features, training classification models, and evaluating their performance. This is a classic beginner-friendly problem that builds a strong foundation in supervised learning.
-
-Dataset Description
-The dataset used in this task contains data of passengers aboard the RMS Titanic. Each row represents one person, and columns contain information such as:
-
-PassengerId: Unique identifier for each passenger
-
-Pclass: Ticket class (1 = Upper, 2 = Middle, 3 = Lower)
-
-Name: Full name
-
-Sex: Gender
-
-Age: Age in years
-
-SibSp: Number of siblings/spouses aboard
-
-Parch: Number of parents/children aboard
-
-Ticket: Ticket number
-
-Fare: Amount paid for the ticket
-
-Cabin: Cabin number
-
-Embarked: Port of Embarkation (C = Cherbourg, Q = Queenstown, S = Southampton)
-
-Survived: Target variable (0 = Did not survive, 1 = Survived)
-
-Steps Performed
-1. Data Preprocessing
-Handled missing values in columns like Age, Cabin, and Embarked.
-
-Converted categorical variables into numeric using encoding techniques.
-
-Removed unnecessary features such as Name, Ticket, and Cabin for model simplicity.
-
-2. Exploratory Data Analysis (EDA)
-Analyzed survival distribution based on gender, class, age, etc.
-
-Used visualizations like bar plots, histograms, and correlation heatmaps.
-
-3. Feature Engineering
-Selected relevant features based on domain knowledge and correlation.
-
-Transformed and scaled data where needed.
-
-4. Model Building
-Applied supervised learning algorithms such as:
-
-Logistic Regression
-
-Random Forest Classifier
-
-Split data into training and test sets using train_test_split.
-
-5. Model Evaluation
-Evaluated models using metrics like:
-
-Accuracy
-
-Confusion Matrix
-
-Precision, Recall, and F1-Score
-
-(Optional) ROC Curve and AUC score
-
-Results
-The Random Forest Classifier gave the best accuracy among the models.
-
-Gender, passenger class, and fare were among the top predictors of survival.
-
-Female passengers and those in higher classes had higher survival probabilities.
-
-Future Scope
-Use advanced models like XGBoost or ensemble techniques for improved accuracy.
-
-Deploy the model using Streamlit to create a web-based Titanic survival predictor.
-
-Tune hyperparameters using GridSearchCV.
-
-Apply cross-validation to reduce variance in model performance.
